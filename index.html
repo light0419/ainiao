@@ -55,6 +55,22 @@
     <div id="dowebok" class="dowebox1">
         <div class="section section1">
             <div class="banner">
+                <div class="banner_bot abs">
+                    <div class="container fix">
+                        <div class="fl rel">
+                            <div class="hengxian"></div>
+                            <div class="cur abs">1</div>
+                            <div class="sum abs">4</div>
+                            <div class="banner_next">
+                                SCROLL <img src="images/jiantou.png" class="vmid trans" alt="">
+                            </div>
+                        </div>
+                        <div class="fr">
+                            <div class="hengxian vmid"></div>
+                            贰拾年，卓越为你
+                        </div>
+                    </div>
+                </div>
                 <div id="owl-demo1" class="owl-carousel">
                     <div class="item db rel" href="#" style="background:url(images/banner.jpg) no-repeat center center;background-size:cover!important;">
                         <div class="item_abs abs">
@@ -85,21 +101,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="banner_bot abs">
-                    <div class="container fix">
-                        <div class="fl rel">
-                            <div class="hengxian"></div>
-                            <div class="cur abs">1</div>
-                            <div class="sum abs">4</div>
-                            <div class="banner_next">
-                                SCROLL <img src="images/jiantou.png" class="vmid" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
                 <script>
                     $(function(){
                         $('.banner .item').height($(window).height())
+                        $('.cur').text('1');
+                        $('.sum').text($('#owl-demo1 .item').size());
                         if($('.banner .item').size()==1){
                             $('.banner .owl-carousel').show();   
                         }
@@ -113,6 +120,13 @@
                                 autoplayTimeout:5000,
                                 autoplayHoverPause:true,
                             });
+                            
+                            $('.banner_next').click(function() {
+                                $('#owl-demo1').trigger('next.owl.carousel');
+                            })
+                            $('#owl-demo1').on('changed.owl.carousel', function(event) {
+                                $('.cur').text($('.owl-dot.active').index()+1)
+                            }) 
                         }
                         
                     });

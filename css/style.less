@@ -29,6 +29,7 @@
 
 .banner{
 	width:100%;
+	position: relative;
 	.owl-theme .owl-controls{
 		margin-top: 0;
 	}
@@ -36,11 +37,60 @@
 		bottom:70px;
 		left:0;
 		width:100%;
+		z-index:21;
 		.fl{
+			height:32px;
+			padding-top: 15px;
+			color:#fff;
+			font-size:20px;
+			line-height:20px;
+			.cur{
+				top:-13px;
+				left:0;
+				width:20px;
+				text-align: center;
+			}
+			.sum{
+				bottom:-10px;
+				left:0;
+				width:20px;
+				text-align: center;
+			}
 			.hengxian{
 				width:362px;
 				height:1px;
 				background: url(../images/hengxian.png) no-repeat center center;
+			}
+			.banner_next{
+				position: absolute;
+				left:100%;
+				width:140px;
+				top:0;
+				line-height:32px;
+				font-size:16px;
+				padding-left: 15px;
+				cursor:pointer;
+				&:hover{
+					img{
+						margin-left: 15px;
+					}
+				}
+				img{
+					margin-left:8px;
+				}
+			}
+		}
+		.fr{
+			color:#fff;
+			font-size:31px;
+			line-height:32px;
+			position: relative;
+			top:-3px;
+			.hengxian{
+				margin-right: 40px;
+				width:300px;
+				height:1px;
+				background: #fff;
 			}
 		}
 	}

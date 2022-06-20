@@ -25,6 +25,7 @@
 }
 .banner {
   width: 100%;
+  position: relative;
 }
 .banner .owl-theme .owl-controls {
   margin-top: 0;
@@ -33,11 +34,60 @@
   bottom: 70px;
   left: 0;
   width: 100%;
+  z-index: 21;
+}
+.banner .banner_bot .fl {
+  height: 32px;
+  padding-top: 15px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+}
+.banner .banner_bot .fl .cur {
+  top: -13px;
+  left: 0;
+  width: 20px;
+  text-align: center;
+}
+.banner .banner_bot .fl .sum {
+  bottom: -10px;
+  left: 0;
+  width: 20px;
+  text-align: center;
 }
 .banner .banner_bot .fl .hengxian {
   width: 362px;
   height: 1px;
   background: url(../images/hengxian.png) no-repeat center center;
+}
+.banner .banner_bot .fl .banner_next {
+  position: absolute;
+  left: 100%;
+  width: 140px;
+  top: 0;
+  line-height: 32px;
+  font-size: 16px;
+  padding-left: 15px;
+  cursor: pointer;
+}
+.banner .banner_bot .fl .banner_next:hover img {
+  margin-left: 15px;
+}
+.banner .banner_bot .fl .banner_next img {
+  margin-left: 8px;
+}
+.banner .banner_bot .fr {
+  color: #fff;
+  font-size: 31px;
+  line-height: 32px;
+  position: relative;
+  top: -3px;
+}
+.banner .banner_bot .fr .hengxian {
+  margin-right: 40px;
+  width: 300px;
+  height: 1px;
+  background: #fff;
 }
 .banner #owl-demo1 .item {
   display: block;
