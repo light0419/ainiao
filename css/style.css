@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+.header {
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+}
+.header .logo {
+  top: 20px;
+  left: 100px;
+  z-index: 2;
+}
+.header .menu1 {
+  right: 100px;
+  top: 20px;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+.header .menu1 img {
+  margin-left: 10px;
+}
+.banner {
+  width: 100%;
+}
+.banner .owl-theme .owl-controls {
+  margin-top: 0;
+}
+.banner .banner_bot {
+  bottom: 70px;
+  left: 0;
+  width: 100%;
+}
+.banner .banner_bot .fl .hengxian {
+  width: 362px;
+  height: 1px;
+  background: url(../images/hengxian.png) no-repeat center center;
+}
+.banner #owl-demo1 .item {
+  display: block;
+}
+.banner #owl-demo1 .item .item_abs {
+  width: 100%;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.banner #owl-demo1 .item .item_abs .icon img {
+  width: auto!important;
+}
+.banner #owl-demo1 .item .item_abs .tit {
+  color: #ffffff;
+  font-size: 57px;
+  line-height: 60px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.banner #owl-demo1 .item .item_abs .note {
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 30px;
+}
+.banner #owl-demo1 .item .item_abs .hengxian {
+  background-color: #ca0a15;
+  width: 34px;
+  height: 5px;
+  margin-top: 50px;
+}

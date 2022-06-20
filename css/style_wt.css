@@ -1,0 +1,20 @@
+@media (min-width: 1600px) {
+  .container {
+    width: 1400px;
+  }
+}
+@media (max-width: 767px) {
+  .header {
+    height: 60px;
+  }
+  .header .logo {
+    top: 10px;
+    left: 15px;
+  }
+  .header .logo img {
+    height: 40px;
+  }
+  .header .header_top {
+    display: none;
+  }
+}
