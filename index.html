@@ -30,14 +30,22 @@
             $('#dowebok').fullpage({
                 anchors: ['page1', 'page2', 'page3', 'page4','page5'],
                 menu: '#menu',
-                verticalCentered: !1
+                verticalCentered: !1,
+                onLeave: function(index, nextIndex, direction){
+                    if(nextIndex!='1'){
+                        $('.header').addClass('on')
+                    }
+                    else{
+                        $('.header').removeClass('on')
+                    }
+                },
             });
         });
     </script>
     
 </head>
 <body>
-    <div class="header">
+    <div class="header trans">
         <div class="container-fluid rel">
             <a href="#" class="logo abs"><img src="images/logo.png" class="db" alt=""></a>
             <div class="menu1 abs">
@@ -133,8 +141,62 @@
                 </script>
             </div>
         </div>
-        <div class="section section2" style="background:#f0f">
-       
+        <div class="section section2" style="background:url(images/bgtp1.jpg)">
+            <div class="sec_main">
+                <div class="container">
+                    <div class="m_top fix">
+                        <div class="fl">
+                            <div class="tit b">ABOUT</div>
+                            <div class="note">集团介绍</div>
+                        </div>
+                        <div class="fr tr">
+                            <div class="tit dincond">01</div>
+                            <div class="hengxian"></div>
+                            <div class="note dincond">
+                                IONIC<br>GROUP
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m_bot fix rel">
+                        <div class="m_left">
+                            <div class="note">
+                                爱奥尼文创集团始创于 2000 年，历经 20 余年的发展，已成为国内领先的沙盘模型、展陈展览及 标识导视等信息传递与沟通的场景建设服务商。集团总部位于北京，业务聚焦最具活力的文化创意类 产业，具有广阔的发展前景。<br><br>
+
+                                2008 年，爱奥尼将公司的“高性价比的模型系统解决方案提供商”的定位延展为“文化交流与 商业营销配套服务商”。在 2014 年将这一定位进一步迭代升级为“信息传递与沟通场景服务商”， 并具体细化为三个角色：高精模型创造者，展陈场景生力军，人文导视倡导者。
+                            </div>
+                            <div class="more">
+                                <a href="#"><img src="images/jiahao.png" class="db" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="m_right abs fix">
+                            <div class="item fl">
+                                <div class="tit fl dincond">2000</div>
+                                <div class="note">创建于</div>
+                            </div>
+                            <div class="item fl">
+                                <div class="tit fl dincond">600</div>
+                                <div class="note">专业团队</div>
+                            </div>
+                            <div class="item fl">
+                                <div class="tit fl dincond">9000+</div>
+                                <div class="note">完成作品</div>
+                            </div>
+                            <div class="item fl">
+                                <div class="tit fl dincond">5000+</div>
+                                <div class="note">服务客户</div>
+                            </div>
+                            <div class="item fl">
+                                <div class="tit fl dincond">100+</div>
+                                <div class="note">荣誉专利</div>
+                            </div>
+                            <div class="item fl">
+                                <div class="tit fl dincond">200+</div>
+                                <div class="note">服务客户</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="section section3" style="background:#ff0">
         

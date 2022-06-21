@@ -8,6 +8,10 @@
   width: 100%;
   z-index: 3;
 }
+.header.on {
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+}
 .header .logo {
   top: 20px;
   left: 100px;
@@ -119,4 +123,13 @@
   width: 34px;
   height: 5px;
   margin-top: 50px;
+}
+.sec_main {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  margin-top: 50px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
