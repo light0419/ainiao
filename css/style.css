@@ -690,3 +690,88 @@
   opacity: 0;
   background-size: cover!important;
 }
+.index_nav {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.index_nav .logo {
+  left: 100px;
+  top: 25px;
+  z-index: 2;
+}
+.index_nav .index_n {
+  width: 100%;
+  height: 100%;
+}
+.index_nav .index_n .item {
+  width: 25%;
+  height: 100%;
+  position: relative;
+}
+.index_nav .index_n .item:hover {
+  background: #eaeaea !important;
+}
+.index_nav .index_n .item:hover.item_abs .shuxian {
+  background: #ca0a15;
+}
+.index_nav .index_n .item:nth-child(2n+1) {
+  background: #fafafa;
+}
+.index_nav .index_n .item .item_abs {
+  height: 440px;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.index_nav .index_n .item .item_abs .tit {
+  text-transform: uppercase;
+  color: #ca0a13;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 50px;
+}
+.index_nav .index_n .item .item_abs .tit1 {
+  color: #000000;
+  font-size: 22px;
+}
+.index_nav .index_n .item .item_abs .shuxian {
+  background-color: rgba(113, 113, 113, 0.5);
+  width: 2px;
+  height: 46px;
+}
+.index_nav .index_n .item .item_abs ul li {
+  line-height: 44px;
+}
+.index_nav .index_n .item .item_abs ul li a {
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 18px;
+  display: inline-block;
+  position: relative;
+}
+.index_nav .index_n .item .item_abs ul li a:before {
+  content: '';
+  width: 28px;
+  height: 2px;
+  background: url(../images/hongxu1.png) no-repeat center center;
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  margin-top: -1px;
+}
+.index_nav .index_n .item .item_abs ul li a:after {
+  content: '';
+  width: 28px;
+  height: 2px;
+  background: url(../images/hongxu2.png) no-repeat center center;
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  margin-top: -1px;
+}
