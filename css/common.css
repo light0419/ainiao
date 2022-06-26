@@ -2,6 +2,7 @@
 /* CSS Document */
 @import 'cssreset.css';
 @import 'animate.min.css';
+@import 'swiper.min.css';
 
 /*common*/
 *:focus {outline: none;}
@@ -140,6 +141,7 @@ table {
 .bnone{border:none !important;}
 body{
 	font-family: "微软雅黑"!important;
+	background: #;
 }
 
 a:hover,a:focus{

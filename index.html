@@ -28,19 +28,31 @@
     <script type="text/javascript">
         $(document).ready(function() {
     
-            $('#dowebok').fullpage({
+            if($(window).width()>768){
+                $('#dowebok').fullpage({
                 anchors: ['page1', 'page2', 'page3', 'page4','page5','page6','page7'],
                 menu: '#menu',
                 verticalCentered: !1,
                 onLeave: function(index, nextIndex, direction){
+                    if(nextIndex!=7){
+                        $('.full_menu .pages1 .numa').text(nextIndex)
+                    }
                     if(nextIndex!='1'){
                         $('.header').addClass('on')
                     }
                     else{
                         $('.header').removeClass('on')
                     }
+
+                    if(nextIndex==6||nextIndex==7||nextIndex==4){
+                        $('.full_menu').addClass('on');
+                    }
+                    else{
+                        $('.full_menu').removeClass('on');
+                    }
                 },
             });
+            }
         });
     </script>
     
@@ -55,6 +67,7 @@
         </div>
     </div>
     <div class="index_nav">
+        <div class="chacha"></div>
         <div class="logo abs"><img src="images/logo2.png" class="db" alt=""></div>
         <div class="index_n fix">
             <div class="item fl fix trans">
@@ -112,15 +125,20 @@
             </div>
         </div>
     </div>
-    <ul id="menu" class="dn">
-        <li data-menuanchor="page1" class="active"><a href="#page1">第一屏</a></li>
-        <li data-menuanchor="page2"><a href="#page2">第二屏</a></li>
-        <li data-menuanchor="page3"><a href="#page3">第三屏</a></li>
-        <li data-menuanchor="page4"><a href="#page4">第四屏</a></li>
-        <li data-menuanchor="page5"><a href="#page5">第五屏</a></li>
-        <li data-menuanchor="page6"><a href="#page6">第六屏</a></li>
-        <li data-menuanchor="page7"><a href="#page7">第七屏</a></li>
-    </ul>
+    <div class="full_menu">
+        <div class="pages1">
+            0<span class="numa">1</span><span class=""> / </span>06
+        </div>
+        <ul id="menu">
+            <li data-menuanchor="page1" class="active"><a href="#page1"></a></li>
+            <li data-menuanchor="page2"><a href="#page2"></a></li>
+            <li data-menuanchor="page3"><a href="#page3"></a></li>
+            <li data-menuanchor="page4"><a href="#page4"></a></li>
+            <li data-menuanchor="page5"><a href="#page5"></a></li>
+            <li data-menuanchor="page6"><a href="#page6"></a></li>
+        </ul>
+    </div>
+    
     
     <div id="dowebok" class="dowebox1">
         <div class="section section1">
@@ -128,7 +146,9 @@
                 <div class="banner_bot abs">
                     <div class="container fix">
                         <div class="fl rel">
-                            <div class="hengxian"></div>
+                            <div class="hengxian">
+                                <div class="inner"></div>
+                            </div>
                             <div class="cur abs">1</div>
                             <div class="sum abs">4</div>
                             <div class="banner_next">
@@ -177,6 +197,8 @@
                         $('.banner .item').height($(window).height())
                         $('.cur').text('1');
                         $('.sum').text($('#owl-demo1 .item').size());
+                        $('.banner_bot .inner').addClass('on')
+
                         if($('.banner .item').size()==1){
                             $('.banner .owl-carousel').show();   
                         }
@@ -188,14 +210,19 @@
                                 nav:false,
                                 autoplay:true,
                                 autoplayTimeout:5000,
-                                autoplayHoverPause:true,
+                                autoplayHoverPause:false,
                             });
-                            
+                            let timer=null;
                             $('.banner_next').click(function() {
                                 $('#owl-demo1').trigger('next.owl.carousel');
                             })
                             $('#owl-demo1').on('changed.owl.carousel', function(event) {
                                 $('.cur').text($('.owl-dot.active').index()+1)
+                                $('.banner_bot .inner').removeClass('on')
+                                setTimeout(function(){
+                                    $('.banner_bot .inner').addClass('on')
+                                },100)
+
                             }) 
                         }
                         
@@ -267,7 +294,7 @@
                 </div>
             </div>
         </div>
-        <div class="section section3">
+        <div class="section section3 fix">
             <a href="#" class="item fl trans on" style="background:url(images/tpa2.jpg) no-repeat center center;">
                 <div class="item_bg trans" style="background:url(images/tp4.jpg) no-repeat center center;"></div>
                 <div class="item_abs1 abs tc trans">
