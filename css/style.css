@@ -1831,3 +1831,11 @@
   font-size: 22px;
   font-weight: bold;
 }
+.ejbanner_word {
+  position: absolute;
+  bottom: 90px;
+  right: 260px;
+  color: #fff;
+  font-size: 22px;
+  line-height: 38px;
+}
